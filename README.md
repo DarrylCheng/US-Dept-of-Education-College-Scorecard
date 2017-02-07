@@ -631,7 +631,7 @@ print(dfplt[variable_to_check].describe())
     
 
 Each ACT test is scored out of 36 points, with the lowest possible score of 1.
-Through the plot and looking into the data, there are one occurence where the SAT score for Math is only 1.
+Through the plot and looking into the data, there are one occurence where the ACT score for Math is only 1.
 We decided that this is not an outlier, lowest possible score for an ACT test is 1.
 
 
@@ -988,18 +988,18 @@ This is probably due to most college has the same range of tuition fees like the
 
 
 ```python
-Sat3_6yEarn = df_copy[(df_copy.ACTENMID > 0)  & (df_copy.ACTMTMID > 0) & (df_copy.ACTWRMID > 0) & (df_copy.MD_EARN_WNE_P6 > 0) ]
-acs = Sat3_6yEarn.sort_values(['ACTENMID', 'ACTMTMID', 'ACTWRMID'], ascending = False).head(10)
-des = Sat3_6yEarn.sort_values(['ACTENMID', 'ACTMTMID', 'ACTWRMID'], ascending = True).head(10)
+ACT3_6yEarn = df_copy[(df_copy.ACTENMID > 0)  & (df_copy.ACTMTMID > 0) & (df_copy.ACTWRMID > 0) & (df_copy.MD_EARN_WNE_P6 > 0) ]
+acs = ACT3_6yEarn.sort_values(['ACTENMID', 'ACTMTMID', 'ACTWRMID'], ascending = False).head(10)
+des = ACT3_6yEarn.sort_values(['ACTENMID', 'ACTMTMID', 'ACTWRMID'], ascending = True).head(10)
 top = plt.plot(acs['MD_EARN_WNE_P6'],'ro', label="Top10")
 btn = plt.plot(des['MD_EARN_WNE_P6'],'bo', label="Worst10")  
 
-plt.title("Top10 SAT score compare with Worst10 SAT score(Earning in 6 years)")
+plt.title("Top10 ACT score compare with Worst10 ACT score(Earning in 6 years)")
 plt.legend()
 plt.ylabel('Earning')
 plt.show()
-#red mean the top 10 SAT score in read, writing and english
-#blue mean the least 10 SAT score in read, writing and english
+#red mean the top 10 ACT score in read, writing and english
+#blue mean the least 10 ACT score in read, writing and english
 #clearly we can know that red earn high than blue
 ```
 
@@ -1007,8 +1007,7 @@ plt.show()
 ![png](output_59_0.png)
 
 
-SAT scores might affect the earnings of graduates. Although due to the unsignificant increase, we cant really construct a predictivve model based on it, but it can still be used as a factor in deciding the college that you should enroll.
-We try to plot the comparison between the top 10 SAT score college and the worst 10 SAT score college in term of earning.
+ACT scores might affect the earnings of graduates. We try to plot the comparison between the top 10 ACT score college and the worst 10 ACT score college in term of earning.
 
 ## Does studying in public college earns more than studying in private college?
 
@@ -1056,7 +1055,7 @@ lm = LinearRegression()
 lm.fit(x,linear_data.MD_EARN_WNE_P6)
 
 print ('Estimated intercept', len(lm.coef_))
-a = pd.DataFrame(list(zip(x.columns, lm.coef_)), columns = ['Subject', 'est'])
+a = pd.DataFrame(list(zip(x.columns, lm.coef_)), columns = ['Subject', 'coeficient'])
 print(a)
 #since ACT math is the highest coeficient, hence we plot ACT math
 
@@ -1068,7 +1067,7 @@ plt.show()
 ```
 
     Estimated intercept 3
-        Subject          est
+        Subject   coeficient
     0  ACTENMID -1189.144312
     1  ACTMTMID  2910.042421
     2  ACTWRMID    -3.014084
@@ -1190,8 +1189,8 @@ math = plt.plot(x['ACTMTMID'], linear_data.MD_EARN_WNE_P6, 'ro', label = "math")
 xp = np.linspace(15, 35, 50)
 best_fit = plt.plot(xp, p(xp), '-', color='green', label="best fit line")
 
-plt.title("Relationship between SAT[Math] and Earning(actual)")
-plt.xlabel("SAT[Math]")
+plt.title("Relationship between ACT[Math] and Earning(actual)")
+plt.xlabel("ACT[Math]")
 plt.ylabel("Earning")
 plt.legend()
 plt.show()
@@ -1212,8 +1211,8 @@ plt.plot(x_test['ACTMTMID'], lm.predict(x_test), 'ro')
 xp = np.linspace(15, 35, 50)
 orange = plt.plot(xp, p(xp), '-')
 
-plt.title("Relationship between SAT[Math] and Earning(model)")
-plt.xlabel("SAT[MATH]")
+plt.title("Relationship between ACT[Math] and Earning(model)")
+plt.xlabel("ACT[MATH]")
 plt.ylabel("Earning")
 plt.show()
 ```
