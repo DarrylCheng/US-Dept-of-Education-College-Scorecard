@@ -76,57 +76,57 @@ df_copy.head(3)
   </thead>
   <tbody>
     <tr>
-      <th>79898</th>
-      <td>100858</td>
-      <td>Auburn University Main Campus</td>
-      <td>1166.0</td>
-      <td>27.0</td>
-      <td>25.0</td>
-      <td>8.0</td>
+      <th>0</th>
+      <td>100636</td>
+      <td>COMMUNITY COLLEGE OF THE AIR FORCE</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>0.0</td>
-      <td>6500.0</td>
-      <td>18260.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>Public</td>
       <td>AL</td>
     </tr>
     <tr>
-      <th>79914</th>
-      <td>101480</td>
-      <td>Jacksonville State University</td>
-      <td>920.0</td>
-      <td>20.0</td>
-      <td>19.0</td>
-      <td>24.0</td>
+      <th>1</th>
+      <td>100654</td>
+      <td>ALABAMA A &amp; M UNIVERSITY</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>0.0</td>
-      <td>4560.0</td>
-      <td>9120.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>Public</td>
       <td>AL</td>
     </tr>
     <tr>
-      <th>79939</th>
-      <td>102234</td>
-      <td>Spring Hill College</td>
-      <td>1090.0</td>
-      <td>25.0</td>
-      <td>23.0</td>
-      <td>8.0</td>
+      <th>2</th>
+      <td>100663</td>
+      <td>UNIVERSITY OF ALABAMA AT BIRMINGHAM</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>0.0</td>
-      <td>24240.0</td>
-      <td>24240.0</td>
-      <td>Private nonprofit</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Public</td>
       <td>AL</td>
     </tr>
   </tbody>
@@ -335,18 +335,18 @@ print (min_max_scaler.fit_transform(dfplt[variable_to_check]))
 ![png](output_11_0.png)
 
 
-    Variance:  0.0359181807255
-    count    1404.000000
-    mean     1087.503561
-    std       158.116770
-    min       700.000000
-    25%       973.000000
-    50%      1065.500000
-    75%      1182.000000
-    max      1534.000000
+    Variance:  0.0136769979888
+    count    18598.000000
+    mean      1052.701043
+    std        126.892749
+    min        514.000000
+    25%        970.000000
+    50%       1035.000000
+    75%       1115.000000
+    max       1599.000000
     Name: SAT_AVG, dtype: float64
-    [ 0.558753    0.26378897  0.4676259  ...,  0.45443645  0.5383693
-      0.32134293]
+    [ 0.4202765   0.47557604  0.5483871  ...,  0.44976959  0.4562212
+      0.35391705]
     
 
 From the histogram of the distribution of average SAT scores of students in college, we may conclude that if you have an overall SAT score of around 900~1200 you may be accepted to enroll in most college. However looking at the histogram, there are some university where the average SAT score of students enrolled are higher or lower than average. We will take a look on those colleges. <br><br>
@@ -400,15 +400,15 @@ print(dfplt[variable_to_check].describe())
 ![png](output_15_0.png)
 
 
-    Variance:  0.100867562962
-    count       61.000000
-    mean      8812.262295
-    std       7426.826164
-    min       1000.000000
-    25%       3000.000000
-    50%       6000.000000
-    75%      14250.000000
-    max      24192.000000
+    Variance:  0.00558676982406
+    count    30778.000000
+    mean     11576.385438
+    std       6613.518286
+    min         70.000000
+    25%       7331.000000
+    50%      10350.000000
+    75%      14603.000000
+    max      88550.000000
     Name: TUITIONFEE_PROG, dtype: float64
     
 
@@ -441,15 +441,15 @@ print(dfplt[variable_to_check].describe())
 ![png](output_17_0.png)
 
 
-    Variance:  0.026601632823
-    count    18467.000000
-    mean     15864.926897
-    std      10263.023581
-    min        150.000000
-    25%       6536.000000
-    50%      14530.000000
-    75%      23010.000000
-    max      63073.000000
+    Variance:  0.0159950644484
+    count    57984.000000
+    mean     10594.489290
+    std       8854.732166
+    min         11.000000
+    25%       3285.000000
+    50%       8505.000000
+    75%      15200.000000
+    max      70024.000000
     Name: TUITIONFEE_IN, dtype: float64
     
 
@@ -457,15 +457,15 @@ print(dfplt[variable_to_check].describe())
 ![png](output_17_2.png)
 
 
-    Variance:  0.0176559190025
-    count    18467.000000
-    mean     18939.291060
-    std       8361.156325
-    min        150.000000
-    25%      12828.000000
-    50%      17586.000000
-    75%      23915.500000
-    max      63073.000000
+    Variance:  0.013504664978
+    count    56818.000000
+    mean     12622.748178
+    std       8135.787628
+    min         15.000000
+    25%       6550.000000
+    50%      10896.500000
+    75%      16600.000000
+    max      70024.000000
     Name: TUITIONFEE_OUT, dtype: float64
     
 
@@ -490,15 +490,15 @@ print(dfplt[variable_to_check].describe())
 ![png](output_19_0.png)
 
 
-    Variance:  0.00573183790663
-    count      7094.000000
-    mean      35880.969834
-    std        8608.708987
-    min       13600.000000
-    25%       30600.000000
-    50%       35000.000000
-    75%       39600.000000
-    max      127300.000000
+    Variance:  0.00743082832795
+    count     28281.000000
+    mean      28958.236979
+    std       10913.398108
+    min        7000.000000
+    25%       21800.000000
+    50%       27300.000000
+    75%       34300.000000
+    max      133600.000000
     Name: MD_EARN_WNE_P6, dtype: float64
     
 
@@ -534,7 +534,7 @@ plt.xlabel("Admission rate of each college")
 plt.ylabel("Freq")
 plt.title("Distribution of admission of each college")
 plt.show()
-print("Rate of NaN: ", (len(df)-len(dfplt))/len(df)*100, "%")
+print("Rate of NaN: ", (len(df_copy)-len(dfplt))/len(df_copy)*100, "%")
 print("Value count:")
 print(dfplt[variable_to_check].value_counts())
 print()
@@ -546,22 +546,23 @@ print("Variance: ", np.var(min_max_scaler.fit_transform(dfplt[variable_to_check]
 ![png](output_23_0.png)
 
 
-    Rate of NaN:  98.8708463275621 %
+    Rate of NaN:  97.10422697856438 %
     Value count:
-    1.0    209
-    3.0      1
+    1.0     3609
+    10.0       1
+    3.0        1
     Name: ADM_RATE, dtype: int64
     
-    count    210.000000
-    mean       1.009524
-    std        0.138013
-    min        1.000000
-    25%        1.000000
-    50%        1.000000
-    75%        1.000000
-    max        3.000000
+    count    3611.000000
+    mean        1.003046
+    std         0.153416
+    min         1.000000
+    25%         1.000000
+    50%         1.000000
+    75%         1.000000
+    max        10.000000
     Name: ADM_RATE, dtype: float64
-    Variance:  0.00473922902494
+    Variance:  0.000290492669096
     
 
 Over 98% of data from ADM_RATE are NaN values, and the variance is also relatively low which means majority of the data are the exact same. Hence we decided to ignore this feature, as it will not be useful in our analysis. <br><br>
@@ -584,10 +585,10 @@ print(dfplt[variable_to_check].describe())
 ![png](output_25_0.png)
 
 
-    Variance:  0.0106555008313
-    count    13192.000000
-    mean        22.337553
-    std          3.509800
+    Variance:  0.0108890489553
+    count    13222.000000
+    mean        22.316669
+    std          3.548055
     min          2.000000
     25%         20.000000
     50%         22.000000
@@ -617,10 +618,10 @@ print(dfplt[variable_to_check].describe())
 ![png](output_27_0.png)
 
 
-    Variance:  0.0097038922902
-    count    13178.000000
-    mean        22.015025
-    std          3.250898
+    Variance:  0.00994217229236
+    count    13207.000000
+    mean        21.994018
+    std          3.290569
     min          2.000000
     25%         20.000000
     50%         22.000000
@@ -651,10 +652,10 @@ print(dfplt[variable_to_check].describe())
 ![png](output_29_0.png)
 
 
-    Variance:  0.000807184101564
-    count    1405.000000
-    mean       10.476868
-    std        14.949499
+    Variance:  0.000807488465614
+    count    1407.000000
+    mean       10.491116
+    std        14.952310
     min         4.000000
     25%         7.000000
     50%         8.000000
@@ -668,7 +669,7 @@ Each ACT test is scored out of 36 points, with the lowest possible score of 1. T
 
 ```python
 #Removing the outlier
-df_copy = df_copy[(df_copy["ACTWRMID"] > 0) & (df_copy["ACTWRMID"] <= 36)]
+df_copy = df_copy[df_copy["ACTWRMID"] != 530]
 ```
 
 After cleaning the ACT data, we want to see the top 10 institute with student of highest ACT score.
@@ -732,7 +733,7 @@ From these three barplots of the top 10 institute with highest ACT scores in wri
 
 ```python
 variable_to_check = "CONTROL"
-dfplt = df.copy()
+dfplt = df_copy.copy()
 
 sns.barplot( dfplt[variable_to_check].value_counts().index, dfplt[variable_to_check].value_counts() )
 plt.ylabel("Count")
@@ -745,9 +746,9 @@ print(dfplt[variable_to_check].value_counts())
 ![png](output_37_0.png)
 
 
-    Private nonprofit     11615
-    Public                 6831
-    Private for-profit      152
+    Private for-profit    51531
+    Public                37943
+    Private nonprofit     35201
     Name: CONTROL, dtype: int64
     
 
@@ -838,8 +839,8 @@ inout.groupby('CONTROL').mean()
     </tr>
     <tr>
       <th>Private nonprofit</th>
-      <td>17554.040965</td>
-      <td>17580.530117</td>
+      <td>17553.688145</td>
+      <td>17580.178636</td>
     </tr>
     <tr>
       <th>Public</th>
@@ -858,7 +859,8 @@ After analysis for all of the institution, we further our analysis to calculate 
 ```python
 asd = df_copy.copy()
 asd = asd[asd['UNEMP_RATE']>0]
-asd = asd[['INSTNM','STABBR','UNEMP_RATE',]]
+asd = asd[['INSTNM','STABBR','UNEMP_RATE']]
+
 asd["INSTNM"] = asd["INSTNM"].str.upper()
 asd = asd.sort_values('UNEMP_RATE',ascending=False)
 asd.drop_duplicates("INSTNM", inplace=True)
@@ -922,7 +924,7 @@ _We will go deeper into it in our linear regression model_
 
 
 ```python
-dfplt = df.copy()
+dfplt = df_copy.copy()
 dfplt = dfplt[(dfplt.ACTENMID > 0)  & (dfplt.ACTMTMID > 0) & (dfplt.ACTWRMID > 0) & (dfplt['MD_EARN_WNE_P6']>0)]
 math = plt.plot(dfplt['ACTMTMID'], dfplt.MD_EARN_WNE_P6, 'ro', label = "math")
 writing = plt.plot(dfplt['ACTWRMID'], dfplt.MD_EARN_WNE_P6, 'go', label = "writing")
@@ -1148,8 +1150,8 @@ print("Train mean square error:", np.mean((y_train - lm.predict(x_train)) ** 2))
 print("Test mean square error:", np.mean((y_test - lm.predict(x_test)) ** 2))
 ```
 
-    Train mean square error: 39306101.81356143
-    Test mean square error: 41909753.20057145
+    Train mean square error: 39191974.760901645
+    Test mean square error: 42488041.97791104
     
 
 We try to see the mean square error for both train and test set.
